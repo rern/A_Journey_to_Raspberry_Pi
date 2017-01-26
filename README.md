@@ -149,20 +149,7 @@ A Journey to Raspberry Pi
 			most remotes code available for download  
 			discrete on, discrete off, discrete input  
 			map any signals to any keys  
-			macro signals  
-		
-**Final System Setup**  
-
-	- Raspberry Pi 3  
-	- Dual Boot (NOOBS) - Rune | OSMC - https://github.com/rern/RPi2-3.Dual.Boot-Rune.OSMC  
-	- Remote - https://github.com/rern/Rune_USB_PC_Remote  
-	- GPIO - https://github.com/rern/RuneUI_GPIO  
-	- JP1 Remote - http://www.hifi-remote.com/  
-				
-**Transfer from SD card to USB drive**  
-
-	- transfer static files  
-	- set boot partition in /boot/cmdline.txt  
+			macro signals   
 			
 **Tweaks**  
 
@@ -185,3 +172,17 @@ A Journey to Raspberry Pi
 		OSMC  
 			add 'amp' on/off menu  
 			add 'bootrune' menu  
+						
+**Transfer from SD card to USB drive**  
+
+	- transfer static files  
+	- set boot partition in /boot/cmdline.txt  
+
+**Final System Setup**  
+
+	- Raspberry Pi 3  
+	- Dual Boot (NOOBS) - Rune | OSMC - https://github.com/rern/RPi2-3.Dual.Boot-Rune.OSMC  
+	- Remote - https://github.com/rern/Rune_USB_PC_Remote  
+	- GPIO - https://github.com/rern/RuneUI_GPIO  
+	- JP1 Remote - http://www.hifi-remote.com/ 
+	
