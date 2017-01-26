@@ -1,6 +1,20 @@
 A Journey to Raspberry Pi
 ---
 
+[Existing Audio Gears]()  
+[DAC Upgrade for sound quality and DSD support]()  
+[Asus RT-AC66U not recognize SMSL M8 - Switch to Windows]()  
+[Switch to low watt MPD with SMSL M8 support]()  
+[Add video player on another SD card]()  
+[Unify to a single SD card dual boot]()  
+[Customizing for easy switch between Rune and OSMC]()  
+[Customizing for consistency and easier switch and control]()  
+[Add remote control for power on/off in sequence]()  
+[Unify Remote Control]()  
+[Final System Setup]()  
+[Transfer from SD card to USB drive]()  
+[Tweaks]()  
+
 **Existing Audio Gears**  
 	- Files		USB hdd (on Asus RT-AC68U router)  
 	- System		TomatoUSB on Asus RT-AC68U router  
