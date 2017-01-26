@@ -18,7 +18,7 @@ A Journey to Raspberry Pi
 **Existing Audio Gears**  
 
 	- Files		USB hdd (on Asus RT-AC68U router)  
-	- Syste		TomatoUSB on Asus RT-AC68U router  
+	- System	TomatoUSB on Asus RT-AC68U router  
 	- Software	MPD  
 	- DAC		built-in USB (Musical Fidelity A1)  
 	- Amplifier	Musical Fidelity A1 Integrated Amplifier  
