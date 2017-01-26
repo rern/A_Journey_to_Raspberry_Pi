@@ -22,7 +22,7 @@ A Journey to Raspberry Pi
 	- Software	MPD  
 	- DAC		built-in USB (Musical Fidelity A1)  
 	- Amplifier	Musical Fidelity A1 Integrated Amplifier  
-	- Speakers	Focal Aria 926, Falcon LS3/5a  
+	- Speakers	Focal Aria 926 
 	- Subwoofer	Acoustech PL-200  
 	
 **DAC upgrade for sound quality and DSD support**  
