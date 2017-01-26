@@ -152,11 +152,12 @@ Tweaks
 			macro signals  
 		
 **Final System Setup**  
+
 	- Raspberry Pi 3  
-	- [Dual Boot (NOOBS) - Rune | OSMC](https://github.com/rern/RPi2-3.Dual.Boot-Rune.OSMC)  
-	- [Remote](https://github.com/rern/Rune_USB_PC_Remote)  
-	- [GPIO](https://github.com/rern/RuneUI_GPIO)  
-	- [JP1 Remote](http://www.hifi-remote.com/)  
+	- Dual Boot (NOOBS) - Rune | OSMC - https://github.com/rern/RPi2-3.Dual.Boot-Rune.OSMC  
+	- Remote - https://github.com/rern/Rune_USB_PC_Remote  
+	- GPIO - https://github.com/rern/RuneUI_GPIO  
+	- JP1 Remote - http://www.hifi-remote.com/  
 				
 **Transfer from SD card to USB drive**  
 
