@@ -18,7 +18,7 @@ Tweaks
 **Existing Audio Gears**  
 
 	- Files		USB hdd (on Asus RT-AC68U router)  
-	- System		TomatoUSB on Asus RT-AC68U router  
+	- Syste		TomatoUSB on Asus RT-AC68U router  
 	- Software	MPD  
 	- DAC		built-in USB (Musical Fidelity A1)  
 	- Amplifier	Musical Fidelity A1 Integrated Amplifier  
@@ -37,43 +37,44 @@ Tweaks
 	
 **Switch to low watt MPD with SMSL M8 support**  
 
-System	Raspberry Pi 3  
-Distro	RuneAudio  
-* MPD based Distros:  
-  * Moode  
-    * hard to reach bit perfect output  
-  * Rune  
-    * bit perfect ready  
-    * DSD ready  
-    * very satisfying result  
-  * Volumio  
-    * satisfied with Rune  
-    * no chance to try yet  
+	- System	Raspberry Pi 3  
+	- Distro	RuneAudio  
+
+	MPD based Distros:  
+		Moode  
+			hard to reach bit perfect output  
+		Rune  
+			bit perfect ready  
+			DSD ready  
+			very satisfying result  
+		Volumio  
+			satisfied with Rune  
+			no chance to try yet  
 			
 **Add video player (on another SD card)**  
 
 	- Distro	OSMC  
 	- Display	LG 55LM7600  
 	
-		Kodi based Distros:  
-			- OpenELEC  
-				limited customizable  
-			- OSMC  
-				satisfying result with some other great skins  
+	Kodi based Distros:  
+		- OpenELEC  
+			limited customizable  
+		- OSMC  
+			satisfying result with some other great skins  
 			
 **Unify to a single SD card dual boot**  
 
 	- Software	NOOBS
 	
-		Multi Boot:  
-			- BerryBoot  
-				can install directly to USB drive  
-				support HDMI CEC  
-				squashfs filesystem needs some skills and patient  
-				Rune outputs loud static noise with some USB DAC  
-			- NOOBS  
-				manageable customizing  
-				filesystem can be extracted directly from image file  
+	Multi Boot:  
+		- BerryBoot  
+			can install directly to USB drive  
+			support HDMI CEC  
+			squashfs filesystem needs some skills and patient  
+			Rune outputs loud static noise with some USB DAC  
+		- NOOBS  
+			manageable customizing  
+			filesystem can be extracted directly from image file  
 		
 **Customizing for easy switch between Rune and OSMC**  
 
@@ -81,23 +82,24 @@ Distro	RuneAudio
 	
 **Customizing for consistency and easier switch and control**  
 
-	- Device	USB PC remote (dirt cheap on eBay)  	
-		Remote Control:  
-			- HDMI CEC - OSMC only  
-				need no additional device but the TV must support CEC  
-				cannot control NOOBS  
-				automatic switch input hassles  
-			- ir module - NOOBS + OSMC  
-				can receive any signal but a lot of key code detection  
-				need a lot of keymaps  
-				cannot control NOOBS  
-				cheap but need DIY enclosure  
-			- ir USB PC Remote - NOOBS + Rune + OSMC  
-				recognized as a keyboard and mouse  
-				control NOOBS boot menu  
-				work in Rune with a single config file  
-				ready to use without settings in OSMC  
-				cheap and easy to install to USB  
+	- Device	USB PC remote (dirt cheap on eBay)  
+	
+	Remote Control:  
+		- HDMI CEC - OSMC only  
+			need no additional device but the TV must support CEC  
+			cannot control NOOBS  
+			automatic switch input hassles  
+		- ir module - NOOBS + OSMC  
+			can receive any signal but a lot of key code detection  
+			need a lot of keymaps  
+			cannot control NOOBS  
+			cheap but need DIY enclosure  
+		- ir USB PC Remote - NOOBS + Rune + OSMC  
+			recognized as a keyboard and mouse  
+			control NOOBS boot menu  
+			work in Rune with a single config file  
+			ready to use without settings in OSMC  
+			cheap and easy to install to USB  
 		
 	Configuration:  
 		- Rune  
@@ -116,21 +118,21 @@ Distro	RuneAudio
 
 	- Device	Relay module control by GPIO (dirt cheap on eBay)  
 	
-	- Remote Control  
-		AC power:  
+	Remote Control  
+		- AC power:  
 			switch on/off amp, pre-amp, DAC in sequence  
 			autoswitch off on idle  
 			autoswitch off on shutdown  
 		
-	- RPi.GPIO  
-		Rune  
+	RPi.GPIO  
+		- Rune  
 			edit 'sudoers' to allow no-password sudo  
 			use php sudo to call python script that cannot sudo by itself  
 			use 'python-mod2' to monitor idle  
 			use python 'requests' for pushstream notification  
 			use pushstream message for GPIO button updating  
 
-		OSMC
+		- OSMC
 			('sudoers' already no password)
 			use python sudo to call python script that cannot sudo by itself
 			use python 'requests' for json-rpc
