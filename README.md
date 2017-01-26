@@ -19,9 +19,9 @@ A Journey to Raspberry Pi
 	- Software	JRiver  
 	
 **Switch to low watt MPD with SMSL M8 support**  
-	- System	Raspberry Pi 3
+	- System	Raspberry Pi 3  
 	- Distro	RuneAudio  
-	
+
 	MPD based Distros:  
 		- Moode  
 			hard to reach bit perfect output  
@@ -117,44 +117,44 @@ A Journey to Raspberry Pi
 				notification
 	
 **Unify Remote Control**  
-	Devices		JP1 remote (universal programmable)  
+	- Devices	JP1 remote (universal programmable)  
 			JP1 FTDI USB to serial cable  
-	Software	RemoteMaster  
+	- Software	RemoteMaster  
 	
-	JP1 Remote	learn any remotes  
+	- JP1 Remote	learn any remotes  
 			most remotes code available for download  
 			discrete on, discrete off, discrete input  
 			map any signals to any keys  
 			macro signals  
 		
 **Final System Setup**  
-	System		Raspberry Pi 3  
-	Software	Dual Boot (NOOBS) - Rune | OSMC  
-	Addons		XBindKeys  
+	- System	Raspberry Pi 3  
+	- Software	Dual Boot (NOOBS) - Rune | OSMC  
+	- Addons	XBindKeys  
 			Python  
 			RPi.GPIO  
-	Devices		USB ir receiver  
+	- Devices	USB ir receiver  
 			Relay module  
 			JP1 Remote  
 				
 **Transfer from SD card to USB drive**  
-	transfer static files  
-	set boot partition in /boot/cmdline.txt  
+	- transfer static files  
+	- set boot partition in /boot/cmdline.txt  
 			
 **Tweaks**  
-	Make installation unattended  
+	- Make installation unattended  
 		append silentinstall to cmdline.txt  
 		custom compile NOOBS to auto reboot on finished  
 		
-	Auto switch audio output to USB  
+	- Auto switch audio output to USB  
 		Rune  
 			replace mpd.conf with on.py  
 		OSMC  
 			get udev parameters  
 			create udev rules  
-	Change OSMC root ssh login to be the same as Rune  
+	- Change OSMC root ssh login to be the same as Rune  
 
-	Modify on-screen user interface  
+	- Modify on-screen user interface  
 		Rune  
 			add 'amp' on/off button  
 			add 'bootosmc' menu  
