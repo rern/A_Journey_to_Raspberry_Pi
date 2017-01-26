@@ -181,8 +181,8 @@ A Journey to Raspberry Pi
 **Final System Setup**  
 
 	Raspberry Pi 3  
-	- Dual Boot (NOOBS) - Rune | OSMC - https://github.com/rern/RPi2-3.Dual.Boot-Rune.OSMC  
-	- Remote - https://github.com/rern/Rune_USB_PC_Remote
-	- JP1 Remote - http://www.hifi-remote.com/ 
-	- RuneUI enhancement - https://github.com/rern/RuneUI_enhancement  
-	- RuneUI GPIO - https://github.com/rern/RuneUI_GPIO  	
+		- Dual Boot (NOOBS) - Rune | OSMC - https://github.com/rern/RPi2-3.Dual.Boot-Rune.OSMC  
+		- Remote - https://github.com/rern/Rune_USB_PC_Remote
+		- JP1 Remote - http://www.hifi-remote.com/ 
+		- RuneUI enhancement - https://github.com/rern/RuneUI_enhancement  
+		- RuneUI GPIO - https://github.com/rern/RuneUI_GPIO  	
