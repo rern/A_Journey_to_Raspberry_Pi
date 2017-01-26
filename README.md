@@ -84,18 +84,6 @@ A Journey to Raspberry Pi
 			not directly support keyboard  
 			use XbindKeys to map keyboard key to command  
 			detect ir code  
-```sh
-xbindkeys -mk
-nano /root/.xbindkeysrc
-```
-	"echo 6 > /sys/module/bcm2709/parameters/reboot_part; /var/www/command/rune_shutdown; reboot"  
-	(ir_code)  
-	restart xbindkeys  
-```sh
-killall xbindkeys
-export DISPLAY=:0
-xbindkeys
-```
 		- OSMC  
 			directly support keyboard  
 			detect ir code with Keymap Editor addon  
@@ -119,72 +107,14 @@ xbindkeys
 			use php sudo to call python script that cannot sudo by itself  
 			use 'python-mod2' to monitor idle  
 			use python 'requests' for pushstream notification  
-			use pushstream message for amp button updating  
-			
-			install python and libraries  
-```sh
-pacman -Sy
-pacman -S python2-pip
-ln -s /usr/bin/pip2 /usr/bin/pip
-ln -s /usr/bin/python2.7 /usr/bin/python
-pip install python-mpd2
-pip install requests
-```
-			add python script  
-				/root/  
-					bootosmc.py
-					bootrune.py
-					gpiooff.py 
-					gpioon.py
-					gpioset.py
-					gpiostatus.py
-					gpiotimer.py
-					poweroff.py
-				/srv/http/
-					bootosmc.php
-					bootrune.php
-					gpio.json
-					gpiooff.php
-					gpioon.php
-					gpiostatus.php
-					gpiotimerrsset.php
-					poweroff.php
-				/srv/http/assets/js/gpio.js
-				/lib/systemd/system/gpioset.service
-			enable auto startup
-				`systemctl enable gpioset`
+			use pushstream message for GPIO button updating  
+
 		OSMC
 			('sudoers' already no password)
 			use python sudo to call python script that cannot sudo by itself
 			use python 'requests' for json-rpc
 				monitor idle
 				notification
-			
-			install python and libraries
-```sh
-apt-get update
-apt-get install python-pip python-dev gcc
-pip install rpi.gpio
-```
-			add python script
-				/home/osmc/
-					bootosmc.py
-					bootosmccmd.py
-					bootrune.py
-					bootrunecmd.py
-					gpioinit.py
-					gpiooff.py 
-					gpiooffcmd.py 
-					gpioon.py 
-					gpiooncmd.py
-					gpioset.py
-					gpiostatus.py
-					gpiotimer.py
-				/lib/systemd/system/gpioset.service
-			enable auto startup
-```sh
-systemctl enable gpioset
-```
 	
 **Unify Remote Control**  
 	Devices		JP1 remote (universal programmable)  
@@ -207,25 +137,9 @@ systemctl enable gpioset
 			Relay module  
 			JP1 Remote  
 				
-Transfer from SD card to USB drive  
+**Transfer from SD card to USB drive**  
 	transfer static files  
-		Rune  
-```sh
-mount /dev/mmcblk0p7 /mnt
-rsync -arv /mnt/ /usb_drive_path_osmc_partition/
-```
-		OSMC  
-```sh
-mount /dev/mmcblk0p9 /mnt
-rsync -arv / /usb_drive_path_rune_partition/
-```
-	set boot partition  
-```sh
-blkid
-nano /boot/cmdline.txt
-```
-	Rune - /dev/mmcblk0p7 to /dev/PARTUUID=xxx...
-	OSMC - /dev/mmcblk0p9 to /dev/UUID=xxx...
+	set boot partition in /boot/cmdline.txt  
 			
 **Tweaks**  
 	Make installation unattended  
@@ -239,14 +153,7 @@ nano /boot/cmdline.txt
 			get udev parameters  
 			create udev rules  
 	Change OSMC root ssh login to be the same as Rune  
-```sh
-sudo nano /etc/ssh/sshd_conf
-```
-	PermitRootLogin yes
-```sh
-sudo passwd root
-rune
-```
+
 	Modify on-screen user interface  
 		Rune  
 			add 'amp' on/off button  
@@ -254,4 +161,3 @@ rune
 		OSMC  
 			add 'amp' on/off menu  
 			add 'bootrune' menu  
-	
