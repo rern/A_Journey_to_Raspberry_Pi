@@ -11,9 +11,9 @@ A Journey to Raspberry Pi
 	Customizing for consistency and easier switch and control  
 	Add remote control for power on/off in sequence  
 	Unify Remote Control  
-	Final System Setup  
+	Tweaks 
 	Transfer from SD card to USB drive  
-	Tweaks  
+ 	Final System Setup  
 
 **Existing Audio Gears**  
 
@@ -180,9 +180,9 @@ A Journey to Raspberry Pi
 
 **Final System Setup**  
 
-	- Raspberry Pi 3  
+	Raspberry Pi 3  
 	- Dual Boot (NOOBS) - Rune | OSMC - https://github.com/rern/RPi2-3.Dual.Boot-Rune.OSMC  
-	- Remote - https://github.com/rern/Rune_USB_PC_Remote  
-	- GPIO - https://github.com/rern/RuneUI_GPIO  
+	- Remote - https://github.com/rern/Rune_USB_PC_Remote
 	- JP1 Remote - http://www.hifi-remote.com/ 
-	
+	- RuneUI enhancement - https://github.com/rern/RuneUI_enhancement  
+	- RuneUI GPIO - https://github.com/rern/RuneUI_GPIO  	
