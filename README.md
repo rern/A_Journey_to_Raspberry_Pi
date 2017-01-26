@@ -30,7 +30,7 @@ A Journey to Raspberry Pi
 			DSD ready  
 			very satisfying result  
 		- Volumio  
-			stuck with Rune  
+			satisfied with Rune  
 			no chance to try yet  
 			
 **Add video player (on another SD card)**  
@@ -84,19 +84,19 @@ A Journey to Raspberry Pi
 			not directly support keyboard  
 			use XbindKeys to map keyboard key to command  
 			detect ir code  
-      ```sh
-	xbindkeys -mk
-	nano /root/.xbindkeysrc
-      ```
+```sh
+xbindkeys -mk
+nano /root/.xbindkeysrc
+```
 	"echo 6 > /sys/module/bcm2709/parameters/reboot_part; /var/www/command/rune_shutdown; reboot"  
 	(ir_code)  
 	restart xbindkeys  
-      ```sh
-	killall xbindkeys
-	export DISPLAY=:0
-	xbindkeys
-      ```
-		OSMC  
+```sh
+killall xbindkeys
+export DISPLAY=:0
+xbindkeys
+```
+		- OSMC  
 			directly support keyboard  
 			detect ir code with Keymap Editor addon  
 			create /home/osmc/.kodi/userdata/keymaps/keyboard.xml  
@@ -104,7 +104,7 @@ A Journey to Raspberry Pi
 			map 'reloadkeymaps' command to a key  
 			add /home/osmc/bootrune.py  
 	
-Add remote control for power on/off in sequence  
+**Add remote control for power on/off in sequence**  
 	- Device	Relay module control by GPIO (dirt cheap on eBay)  
 	
 	- Remote Control  
@@ -122,17 +122,18 @@ Add remote control for power on/off in sequence
 			use pushstream message for amp button updating  
 			
 			install python and libraries  
-      ```sh
-				pacman -Sy
-				pacman -S python python-pip gcc
-				pip install rpi.gpio
-				pip install python-mpd2
-      ```
+```sh
+pacman -Sy
+pacman -S python2-pip
+ln -s /usr/bin/pip2 /usr/bin/pip
+ln -s /usr/bin/python2.7 /usr/bin/python
+pip install python-mpd2
+pip install requests
+```
 			add python script  
 				/root/  
 					bootosmc.py
 					bootrune.py
-					gpioinit.py
 					gpiooff.py 
 					gpioon.py
 					gpioset.py
@@ -142,12 +143,13 @@ Add remote control for power on/off in sequence
 				/srv/http/
 					bootosmc.php
 					bootrune.php
+					gpio.json
 					gpiooff.php
 					gpioon.php
 					gpiostatus.php
 					gpiotimerrsset.php
 					poweroff.php
-				/srv/http/assets/js/amp.js
+				/srv/http/assets/js/gpio.js
 				/lib/systemd/system/gpioset.service
 			enable auto startup
 				`systemctl enable gpioset`
@@ -159,11 +161,11 @@ Add remote control for power on/off in sequence
 				notification
 			
 			install python and libraries
-      ```sh
-				apt-get update
-				apt-get install python-pip python-dev gcc
-				pip install rpi.gpio
-      ```
+```sh
+apt-get update
+apt-get install python-pip python-dev gcc
+pip install rpi.gpio
+```
 			add python script
 				/home/osmc/
 					bootosmc.py
@@ -180,81 +182,76 @@ Add remote control for power on/off in sequence
 					gpiotimer.py
 				/lib/systemd/system/gpioset.service
 			enable auto startup
-      ```sh
-				systemctl enable gpioset
-      ```
+```sh
+systemctl enable gpioset
+```
 	
-Unify Remote Control
-	Devices		JP1 remote (universal programmable)
-				JP1 FTDI USB to serial cable
-	Software	RemoteMaster
+**Unify Remote Control**  
+	Devices		JP1 remote (universal programmable)  
+			JP1 FTDI USB to serial cable  
+	Software	RemoteMaster  
 	
-	JP1 Remote
-		learn any remotes
-		most remotes code available for download
-		discrete on, discrete off, discrete input
-		map any signals to any keys
-		macro signals
+	JP1 Remote	learn any remotes  
+			most remotes code available for download  
+			discrete on, discrete off, discrete input  
+			map any signals to any keys  
+			macro signals  
 		
-Final System Setup
-	System	Raspberry Pi 3
-	Software	Dual Boot (NOOBS) - Rune | OSMC
-	Addons		XBindKeys
-				Python
-				RPi.GPIO
-	Devices		USB ir receiver
-				Relay module
-				JP1 Remote
+**Final System Setup**  
+	System		Raspberry Pi 3  
+	Software	Dual Boot (NOOBS) - Rune | OSMC  
+	Addons		XBindKeys  
+			Python  
+			RPi.GPIO  
+	Devices		USB ir receiver  
+			Relay module  
+			JP1 Remote  
 				
-Transfer from SD card to USB drive
-	prepare USB drive
-		minimum 4GB
-		Rune >=2.4GB ext4 | OSMC >=1.4GB ext4
-	transfer static files
-		in Rune
-    ```sh
-			mount /dev/mmcblk0p7 /mnt
-			rsync -arv /mnt/ /usb_drive_path_osmc_partition/
-    ```
-		in OSMC
-    ```sh
-			mount /dev/mmcblk0p9 /mnt
-			rsync -arv / /usb_drive_path_rune_partition/
-    ```
-	set boot partition
-  ```sh
-		blkid
-		nano /boot/cmdline.txt
-  ```
-			Rune - /dev/mmcblk0p7 to /dev/PARTUUID=xxx...
-			OSMC - /dev/mmcblk0p9 to /dev/UUID=xxx...
+Transfer from SD card to USB drive  
+	transfer static files  
+		Rune  
+```sh
+mount /dev/mmcblk0p7 /mnt
+rsync -arv /mnt/ /usb_drive_path_osmc_partition/
+```
+		OSMC  
+```sh
+mount /dev/mmcblk0p9 /mnt
+rsync -arv / /usb_drive_path_rune_partition/
+```
+	set boot partition  
+```sh
+blkid
+nano /boot/cmdline.txt
+```
+	Rune - /dev/mmcblk0p7 to /dev/PARTUUID=xxx...
+	OSMC - /dev/mmcblk0p9 to /dev/UUID=xxx...
 			
-Tweaks
-	Make installation unattended
-		append silentinstall to cmdline.txt
-		custom compile NOOBS to auto reboot on finished
+**Tweaks**  
+	Make installation unattended  
+		append silentinstall to cmdline.txt  
+		custom compile NOOBS to auto reboot on finished  
 		
-	Auto switch audio output to USB
-		Rune
-			replace mpd.conf with on.py
-		OSMC
-			get udev parameters
-			create udev rules
-	Change OSMC root ssh login to be the same as Rune
-  ```sh
-		sudo nano /etc/ssh/sshd_conf
-  ```
-			PermitRootLogin yes
-  ```sh
-		sudo passwd root
-			rune
-  ```
-		
-	Modify on-screen user interface
-		Rune
-			add 'amp' on/off button
-			add 'bootosmc' menu
-		OSMC
-			add 'amp' on/off menu
-			add 'bootrune' menu
+	Auto switch audio output to USB  
+		Rune  
+			replace mpd.conf with on.py  
+		OSMC  
+			get udev parameters  
+			create udev rules  
+	Change OSMC root ssh login to be the same as Rune  
+```sh
+sudo nano /etc/ssh/sshd_conf
+```
+	PermitRootLogin yes
+```sh
+sudo passwd root
+rune
+```
+	Modify on-screen user interface  
+		Rune  
+			add 'amp' on/off button  
+			add 'bootosmc' menu  
+		OSMC  
+			add 'amp' on/off menu  
+			add 'bootrune' menu  
 	
