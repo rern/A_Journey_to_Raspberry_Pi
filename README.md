@@ -37,19 +37,18 @@ Tweaks
 	
 **Switch to low watt MPD with SMSL M8 support**  
 
-	- System	Raspberry Pi 3  
-	- Distro	RuneAudio  
-
-		MPD based Distros:  
-			- Moode  
-				hard to reach bit perfect output  
-			- Rune  
-				bit perfect ready  
-				DSD ready  
-				very satisfying result  
-			- Volumio  
-				satisfied with Rune  
-				no chance to try yet  
+System	Raspberry Pi 3  
+Distro	RuneAudio  
+* MPD based Distros:  
+  * Moode  
+    * hard to reach bit perfect output  
+  * Rune  
+    * bit perfect ready  
+    * DSD ready  
+    * very satisfying result  
+  * Volumio  
+    * satisfied with Rune  
+    * no chance to try yet  
 			
 **Add video player (on another SD card)**  
 
