@@ -1,8 +1,8 @@
 A Journey to Raspberry Pi
 ---
 
-	Existing Audio Gears  
-	DAC Upgrade for sound quality and DSD support  
+	Existing audio gears  
+	DAC upgrade for sound quality and DSD support  
 	Asus RT-AC66U not recognize SMSL M8 - Switch to Windows  
 	Switch to low watt MPD with SMSL M8 support  
 	Add video player on another SD card  
@@ -15,7 +15,7 @@ A Journey to Raspberry Pi
 	Transfer from SD card to USB drive  
  	Final System Setup  
 
-**Existing Audio Gears**  
+**Existing audio gears**  
 
 	- Files		USB hdd (on Asus RT-AC68U router)  
 	- System	TomatoUSB on Asus RT-AC68U router  
@@ -25,7 +25,7 @@ A Journey to Raspberry Pi
 	- Speakers	Focal Aria 926, Falcon LS3/5a  
 	- Subwoofer	Acoustech PL-200  
 	
-**DAC Upgrade for sound quality and DSD support**  
+**DAC upgrade for sound quality and DSD support**  
 
 	- DAC		SMSL M8 ES9018K2M 24Bit/384KHz (XMOS USB, coax, optical)  
 	
