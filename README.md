@@ -1,19 +1,19 @@
 A Journey to Raspberry Pi
 ---
 
-[Existing Audio Gears]()  
-[DAC Upgrade for sound quality and DSD support]()  
-[Asus RT-AC66U not recognize SMSL M8 - Switch to Windows]()  
-[Switch to low watt MPD with SMSL M8 support]()  
-[Add video player on another SD card]()  
-[Unify to a single SD card dual boot]()  
-[Customizing for easy switch between Rune and OSMC]()  
-[Customizing for consistency and easier switch and control]()  
-[Add remote control for power on/off in sequence]()  
-[Unify Remote Control]()  
-[Final System Setup]()  
-[Transfer from SD card to USB drive]()  
-[Tweaks]()  
+Existing Audio Gears  
+DAC Upgrade for sound quality and DSD support  
+Asus RT-AC66U not recognize SMSL M8 - Switch to Windows  
+Switch to low watt MPD with SMSL M8 support  
+Add video player on another SD card  
+Unify to a single SD card dual boot  
+Customizing for easy switch between Rune and OSMC  
+Customizing for consistency and easier switch and control  
+Add remote control for power on/off in sequence  
+Unify Remote Control  
+Final System Setup  
+Transfer from SD card to USB drive  
+Tweaks  
 
 **Existing Audio Gears**  
 
@@ -151,7 +151,6 @@ A Journey to Raspberry Pi
 			macro signals  
 		
 **Final System Setup**  
-
 	- Raspberry Pi 3  
 	- [Dual Boot (NOOBS) - Rune | OSMC](https://github.com/rern/RPi2-3.Dual.Boot-Rune.OSMC)  
 	- [Remote](https://github.com/rern/Rune_USB_PC_Remote)  
